@@ -1,5 +1,5 @@
 {
-  "homepage": "https://<your-username>.github.io/<your-repo-name>",
+  "homepage": "https://DanielArmR.github.io/workshop1-DOM",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
