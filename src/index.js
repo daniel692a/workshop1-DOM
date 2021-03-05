@@ -28,13 +28,13 @@ const fetchAvocados = async() => {
             imgAvocado.className = 'img-avocado';
             const nameAvocado = document.createElement('h2');
             nameAvocado.textContent = e.name;
-            nameAvocado.className = 'text-xl text-center';
+            nameAvocado.className = 'text-xl text-center text-green-500';
             const price = document.createElement('p');
             price.textContent = `Price: ${formatPrice(e.price)}`;
-            price.className = 'text-center';
+            price.className = 'text-center text-green-50';
             const container = document.createElement('div');
             container.append(imgAvocado, nameAvocado, price);
-            container.className = 'rounded-lg bg-green-200 bg-opacity-50';
+            container.className = 'rounded-lg';
             avocados.push(container);
         });
         appNode.append(...avocados);
