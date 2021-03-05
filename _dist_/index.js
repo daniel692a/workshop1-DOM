@@ -5,6 +5,12 @@
 const baseUrl = 'https://platzi-avo.vercel.app';
 const appNode = document.querySelector('#app');
 appNode.className = 'container-avocados';
+/* Deelegación de eventos */
+appNode.addEventListener('click', (event) => {
+    if(event.target.nodeName === 'H2') {
+        alert(event.target.innerText);
+    }
+})
 
 const formatPrice = (price) =>{
     /* API de internacionalización */
