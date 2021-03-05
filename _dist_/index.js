@@ -20,17 +20,17 @@ const fetchAvocados = async() => {
         const response = await fetch(`${baseUrl}/api/avo`);
         const data = await response.json();
         const avocados = [];
-        data.data.forEach(e => {
+        data.data.forEach(avocado => {
             const imgAvocado = document.createElement('img');
-            imgAvocado.src = `${baseUrl}${e.image}`;
-            imgAvocado.title = e.name;
-            imgAvocado.alt = e.name;
+            imgAvocado.src = `${baseUrl}${avocado.image}`;
+            imgAvocado.title = avocado.name;
+            imgAvocado.alt = avocado.name;
             imgAvocado.className = 'img-avocado';
             const nameAvocado = document.createElement('h2');
-            nameAvocado.textContent = e.name;
-            nameAvocado.className = 'text-xl text-center text-green-500';
+            nameAvocado.textContent = avocado.name;
+            nameAvocado.className = 'text-xl text-center text-green-200 font-semibold';
             const price = document.createElement('p');
-            price.textContent = `Price: ${formatPrice(e.price)}`;
+            price.textContent = `Price: ${formatPrice(avocado.price)}`;
             price.className = 'text-center text-green-50';
             const container = document.createElement('div');
             container.append(imgAvocado, nameAvocado, price);
