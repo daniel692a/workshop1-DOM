@@ -1,5 +1,5 @@
 {
-  "homepage": "https://DanielArmR.github.io/workshop1-DOM",
+  "homepage": "https://daniel692a.github.io/workshop1-DOM",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
