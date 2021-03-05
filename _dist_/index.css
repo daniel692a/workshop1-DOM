@@ -2,7 +2,6 @@
 @import "../_snowpack/pkg/tailwindcss/dist/components.css";
 @import "../_snowpack/pkg/tailwindcss/dist/utilities.css";
 
-
 ::-webkit-scrollbar {
     width: 15px;
     height: 8px;
@@ -11,6 +10,40 @@
 ::-webkit-scrollbar-thumb{
     background: #7e381f;
     border-radius: 10px;
+}
+.alert {
+    position: fixed;
+    top: 50%;
+    width: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #111827;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0px 0px 12px 0px rgba(231, 231, 231, 0.75);
+}
+.alert.show {
+    animation: show_slide 2s ease forwards;
+}
+@keyframes show_slide{
+    0%{
+        transform: translateX(-100%);
+    }
+    70% {
+        transform: translateX(-50%);
+    }
+    100%{
+        transform: translateX();
+    }
+}
+.close {
+    position: absolute;
+    left: 95%;
+    cursor: pointer;
+    top: 10px;
+}
+.alert.hide {
+    display: none;
 }
 .container-avocados{
     display: flex;
@@ -22,6 +55,8 @@
 .container-avocados div {
     margin-bottom: 30px;
     padding: 10px;
+    height: auto;
+    overflow: visible;
 }
 .img-avocado{
     width: 60%;
@@ -29,19 +64,33 @@
     margin: auto;
     border-radius: 50%;
 }
+footer img {
+    margin: 2rem 0;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
 @media (min-width: 200px){
     .container-avocados div {
         width: 100%;
-        height: 300px;
+    }
+    footer img {
+        width: 50px;
     }
 }
 @media (min-width: 600px){
     .container-avocados div {
         width: 40%;
     }
+    footer img {
+        width: 70px;
+    }
 }
 @media (min-width: 800px){
     .container-avocados div {
         width: 30%;
+    }
+    footer img {
+        width: 130px;
     }
 }
