@@ -2,6 +2,16 @@
 @import 'tailwindcss/dist/components.css';
 @import 'tailwindcss/dist/utilities.css';
 
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 8px;
+    background: #b0bd52;
+}
+::-webkit-scrollbar-thumb{
+    background: #7e381f;
+    border-radius: 10px;
+}
 .container-avocados{
     display: flex;
     flex-wrap: wrap;
@@ -14,8 +24,8 @@
     padding: 10px;
 }
 .img-avocado{
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    height: auto;
     margin: auto;
     border-radius: 50%;
 }
